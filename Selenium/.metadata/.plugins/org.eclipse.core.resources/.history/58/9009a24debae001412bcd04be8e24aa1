@@ -1,0 +1,21 @@
+package eBayIndiaComponents;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+	
+
+public class LoginPage {
+	
+	public static void main(String[] args){
+		System.setProperty("webdriver.chrome.driver", "/Users/chaitanya/Downloads/chromedriver");
+	WebDriver driver = new ChromeDriver();
+	driver.get("http://www.ebay.in");
+	System.out.println(driver.getTitle());
+	if (driver.getTitle() == "Electronics, Cars, Fashion, Collectibles, Coupons and More Online Shopping | eBay"){
+	System.out.println("You are on the correct page");
+	} else
+	{
+		System.out.println("You are on the wrong page");
+	}
+	}
+}
